@@ -1,0 +1,115 @@
+/* CSS-RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS-VARIABLES */
+:root{
+    --ff-primary: 'Roboto', sans-serif;
+    --bg-body: #06776E; 
+    --white: #FFFFFF;
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--bg-body);
+    color: var(--white);
+    font-family: var(--ff-primary);
+    font-size: 1.2rem;
+    margin: 0 2rem;
+}
+
+/* CONTAINER-FORMATTING */
+.container {
+    max-width: 76.8rem;
+    margin: 2rem auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container h1{
+    font-size: 3.6rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 3rem;
+}
+
+/* QUOTES-FORMATTING */
+.quotes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+blockquote {
+    margin-bottom: 25px;
+}
+
+.quote{
+    position: relative;
+    font-size: 2rem;
+    line-height: 3rem;
+    word-break: break-word;
+}
+
+.quote footer {
+    color: #d3d3cf;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: right;
+}
+
+/* LOADER-FORMATTING */
+.loader {
+    display: inline-block;
+    position: relative;
+    width: 8rem;
+    height: 8rem;
+    opacity: 0;
+}
+
+.loader.show {
+    opacity: 1;
+}
+
+.loader div {
+    display: inline-block;
+    position: absolute;
+    left: 0.8rem;
+    width: 1.6rem;
+    background: #f4f4f4;
+    animation: loader 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+
+.loader div:nth-child(1) {
+    left: 0.8rem;
+    animation-delay: -0.24s;
+}
+
+.loader div:nth-child(2) {
+    left: 3.2rem;
+    animation-delay: -0.12s;
+}
+
+.loader div:nth-child(3) {
+    left: 5.6rem;
+    animation-delay: 0;
+}
+
+/* LOADER-ANIMATION */
+@keyframes loader {
+    0% {
+        top: 0.8rem;
+        height: 6.4rem;
+    }
+
+    50%,
+    100% {
+        top: 2.4rem;
+        height: 3.2rem;
+    }
+}
