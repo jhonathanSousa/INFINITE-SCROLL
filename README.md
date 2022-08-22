@@ -1,4 +1,4 @@
-[![Watch the video](capa.PNG)](video.webm)
+![App Screenshot](capa.PNG)
 
 # SCROLL-INFINITE
 
